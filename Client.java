@@ -10,7 +10,7 @@ public class Client {
         for (int i = 0; i < args[0].length(); i++) {
             for (int j = 0; j < names.length; j++) {
                 KodInterface ki = (KodInterface) reg.lookup(names[j]);
-                if (args[0].charAt(i) == names[j].charAt(0)) {
+                if (ki.getCode(args[0].charAt(i)) != -1) {
                     System.out.println(args[0].charAt(i) + " " + ki.getCode(args[0].charAt(i)));
                 }
             }
